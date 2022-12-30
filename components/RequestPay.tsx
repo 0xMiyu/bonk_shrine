@@ -10,6 +10,7 @@ import { FC, useCallback, useState, useRef } from "react";
 import { getAssociatedTokenAddress, createTransferCheckedInstruction } from "@solana/spl-token";
 import { RANDOMDIV } from "./testing";
 import { useOutsideAlerter } from "./kewk";
+import styles from '../styles/Home.module.css'
 
 
 
@@ -74,14 +75,19 @@ export const RequestPay: FC = () => {
     }, [publicKey, connection]);
 
     return (
-        <div ref={wrapperRef}>
+        // <div ref={wrapperRef}>
+        <div>
+            {components.map((item, i) => (<img className={styles.coin} src="BonkLogo.webp"></img> ))}
+            <br/>
+            <br/>
+            <br/>
             <button
                 className="px-8 m-2 btn animate-pulse bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:from-pink-500 hover:to-yellow-500 ..."
                 onClick={onClick}
             >
                 <span>PAY BONK!</span>
             </button>
-            {components.map((item, i) => (<RANDOMDIV text={item}/> ))}
+            
 
         </div>
     );
