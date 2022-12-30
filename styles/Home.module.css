@@ -179,7 +179,7 @@
   padding: 20px;
   width: 80%;
   max-width: 900px;
-  aspect-ratio: 21/9;
+  aspect-ratio: 3/1;
   color: rgba(0, 0, 0, .9);
   -webkit-animation: 0.5s fadeIn 0s ease-out;
   animation: 0.5s fadeIn 0s ease-out;
@@ -208,10 +208,12 @@
   top: 0;
   z-index: 2;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) .5%, rgba(0, 0, 0, .15) 1.2%, transparent 1.2%),
-    linear-gradient(to left, rgba(255, 255, 255, 1) .5%, rgba(0, 0, 0, .15) 1.2%, transparent 1.2%);
-  background-size: 33% 100%, 33% 100%;
-  background-position: right top, left top;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) .2%, rgba(0, 0, 0, .15) 0.5%, transparent 0.6%),
+    linear-gradient(to left, rgba(255, 255, 255, 1) .2%, rgba(0, 0, 0, .15) 0.4%, transparent 0.6%),
+    linear-gradient(265deg, rgba(0, 0, 0, .2), transparent 10%),
+    linear-gradient(-265deg, rgba(0, 0, 0, .2), transparent 10%);
+  background-size: 33% 100%, 33% 100%, 67% 100%, 67% 100%;
+  background-position: right top, left top, left top, right top;
 }
 
 
