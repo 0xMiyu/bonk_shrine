@@ -151,15 +151,37 @@
 }
 
 .coin {
-  position: relative;
+  position: absolute;
   width: 96px;
   bottom: 20%;
+  left: calc(50% - 48px);
   transform-origin: center;
   animation: spin 1s infinite linear, throw_coin 2s forwards ease-in-out;
 }
 
+.pay__button__wrapper {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+}
+
+.pay__button {
+  display: block;
+  height: 50px;
+  margin: auto;
+  padding: .5rem;
+  background: #a6a6a6;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .fortune_container {
-  display: flex;
+  display: none;
   position: fixed;
   z-index: 300;
   left: 0;
@@ -216,6 +238,12 @@
   background-position: right top, left top, left top, right top;
 }
 
+.wallet_button_container {
+  position: fixed;
+  top: 0;
+  right: 0px;
+}
+
 
 @keyframes spin {
   0% {
@@ -230,17 +258,17 @@
 @keyframes throw_coin {
   0% {
     scale: 1;
-    bottom: 0;
+    bottom: 50px;
   }
 
   40% {
     scale: 0.6;
-    bottom: 50%;
+    bottom: calc(50px + 50%);
   }
 
   100% {
     scale: 0;
-    bottom: 25%;
+    bottom: calc(50px + 25%);
   }
 }
 
