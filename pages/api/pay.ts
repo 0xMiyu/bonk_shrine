@@ -25,7 +25,7 @@ export default function handler(
         case "POST":
           const accountField = req.body.account;
           const account = new PublicKey(accountField);
-          const connection = new Connection(clusterApiUrl("devnet"));
+          const connection = new Connection(clusterApiUrl("mainnet-beta"));
           // create the transaction
           const transaction = new Transaction();
       
