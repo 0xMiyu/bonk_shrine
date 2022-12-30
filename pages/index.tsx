@@ -47,7 +47,16 @@ export default function Home() {
             </div>
             <img className={styles.coin} src="BonkLogo.webp"></img>
           </div>
-          
+
+          <div className={styles.fortune_container}>
+            <div className={styles.fortune}>
+              <div>col 1</div>
+              <div>col 2</div>
+              <div>col 3</div>
+            </div>
+          </div>
+
+
           <br />
           <WalletMultiButton className="btn btn-ghost mr-4" />
           <br />
