@@ -360,15 +360,41 @@
   animation: drop 1s forwards ease-in-out 0.5s, fadeOut 0.5s forwards ease-in 0.5s;
 }
 
+@media screen and (max-width: 400px) {
+
+  /* rotate the fortune div */
+  .fortune {
+    transform: rotate(90deg);
+    width: 80vh;
+    height: auto;
+  }
+
+  .fortune_ribbon {
+    transform: rotate(90deg);
+    animation: dropLeft 1s forwards ease-in-out 0.5s, fadeOut 0.5s forwards ease-in 0.5s;
+  }
+}
+
 @keyframes drop {
   0% {
     transform: translateY(0);
   }
 
   100% {
-    transform: translateY(100%);
+    transform: translateY(100%) rotate(90deg);
   }
 }
+
+@keyframes dropLeft {
+  0% {
+    transform: translateX(0) rotate(90deg);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+  
 
 @keyframes fadeOut {
   0% {
