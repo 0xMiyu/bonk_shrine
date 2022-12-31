@@ -25,6 +25,7 @@ export const RequestPay: FC = () => {
     const [components, setComponents] = useState([""]); 
     const wrapperRef = useRef(null);
     useOutsideAlerter(wrapperRef);
+
     const onClick = useCallback(async () => {
         if (!publicKey) {
             console.log("error", "Wallet not connected!");
@@ -63,7 +64,7 @@ export const RequestPay: FC = () => {
             alert("Transaction Confirmed!");
             
   
-            setComponents([...components, "Sample Component"]) 
+            setComponents([...components, ""]) 
    
             console.log("fuck")
     
@@ -77,7 +78,7 @@ export const RequestPay: FC = () => {
     return (
         // <div ref={wrapperRef}>
         <div>
-            {components.map((item, i) => (<img className={styles.coin} src="BonkLogo.webp"></img> ))}
+            {components.map((item, i) => (<img key={i} className={styles.coin} src="BonkLogo.webp"></img> ))}
             <br/>
             <br/>
             <br/>

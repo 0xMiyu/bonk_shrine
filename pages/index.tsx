@@ -16,8 +16,8 @@ export default function Home() {
           <meta name="description" content="kekw" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-
         <main className={styles.main}>
+          
           <h1 className={styles.title}>
             Welcome to the Shrine of Bonk!
           </h1>
@@ -55,10 +55,10 @@ export default function Home() {
               <div>col 3</div>
             </div>
           </div> */}
-
+          <WalletMultiButton className="btn btn-ghost mr-4" style = {{position:"relative", left:"0%"}}/>
 
           <br />
-          <WalletMultiButton className="btn btn-ghost mr-4" />
+          
           <br />
           <br />
 
