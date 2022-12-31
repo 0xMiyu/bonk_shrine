@@ -16,6 +16,7 @@ import { AutoConnectProvider, useAutoConnect } from './AutoConnectProvider';
 import { NetworkConfigurationProvider, useNetworkConfiguration } from './NetworkConfigurationProvider';
 import dynamic from "next/dynamic";
 
+
 const ReactUIWalletModalProviderDynamic = dynamic(
   async () =>
     (await import("@solana/wallet-adapter-react-ui")).WalletModalProvider,
@@ -28,9 +29,10 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     // const network = networkConfiguration as WalletAdapterNetwork;
     const network = 'mainnet-beta';
     // const endpoint = useMemo(() => clusterApiUrl(network), [network]);
-    const endpoint = 'lmao';
+    const endpoint = "https://rpc.helius.xyz/?api-key=60219cb7-35dc-425a-928b-c7be0fc8ebf4"
     
     console.log(network);
+    console.log(endpoint);
 
     const wallets = useMemo(
         () => [
