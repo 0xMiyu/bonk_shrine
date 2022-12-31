@@ -14,13 +14,19 @@ export default function Home() {
       <div className={styles.container}>
         <Head>
           <title>Solana lfg</title>
+          <meta charSet="utf-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width,initial-scale=1" />
           <meta name="description" content="Shrine of Bonk" />
           <link rel="icon" href="/torii.svg" />
           <meta property="og:title" content="Shrine of Bonk" />
           <meta property="og:description" content="Get your fortune read at Hatsumode" />
-          <meta property="twitter:card" content="summary" />
-          <meta property="twitter:creator" content="@0xMiyu" />
-          <meta property="twitter:image" content="https://bonk-shrine.vercel.app/card.png" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:title" content="Shrine of Bonk" />
+          <meta name="twitter:description" content="Get your fortune read at Hatsumode" />
+          <meta name="twitter:site" content="@0xMiyu" />
+          <meta name="twitter:creator" content="@0xMiyu" />
+          <meta name="twitter:image" content="https://bonk-shrine.vercel.app/card.png" />
           <meta property="og:type" content="article" />
           <meta property="og:url" content="https://bonk-shrine.vercel.app/" />
           <meta property="og:image" content="https://bonk-shrine.vercel.app/card.png" />
