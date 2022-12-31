@@ -210,7 +210,7 @@ export const RequestPay: FC = () => {
             <div className={styles.pay__button__wrapper}>
 
                 <button className={styles.pay__button} onClick={onClick}>
-                    <span>PAY BONK!</span>
+                    <span>PAY BONK! 🙏</span>
                 </button>
 
             </div>
