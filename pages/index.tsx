@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.css'
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { ContextProvider } from '../contexts/ContextProvider';
 import { RequestPay } from '../components/RequestPay';
-import { TwitterShareButton, TwitterIcon } from 'react-share';
 // import { FortuneElement } from '../components/fortune';
 require('@solana/wallet-adapter-react-ui/styles.css');
 
@@ -16,7 +15,7 @@ export default function Home() {
         <Head>
           <title>Solana lfg</title>
           <meta name="description" content="kekw" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/torii.svg" />
         </Head>
         <main className={styles.main}>
           <div className={styles.wallet_button_container}>
@@ -26,7 +25,6 @@ export default function Home() {
           <h1 id='werk' className={styles.title}>
             Welcome to the Shrine of Bonk!
           </h1>
-          <br />
 
           <RequestPay />
 

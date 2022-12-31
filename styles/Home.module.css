@@ -48,7 +48,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 400%;
 }
 
 .title,
@@ -362,6 +362,7 @@
   position: absolute;
   width: 40%;
   max-width: 450px;
+  height: auto;
   animation: drop 1s forwards ease-in-out 0.5s, fadeOut 0.5s forwards ease-in 0.5s;
 }
 
