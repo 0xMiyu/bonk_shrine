@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'nagayama_kai08';
+  src: url(../public/nagayama_kai08.otf) format('opentype');
+}
+
 .container {
   padding: 0 2rem;
 }
@@ -108,6 +113,12 @@
   margin-left: 0.5rem;
 }
 
+.wallet_button_container {
+  position: fixed;
+  top: 0;
+  right: 0px;
+}
+
 .shrine {
   position: relative;
   text-align: center;
@@ -181,9 +192,9 @@
 }
 
 .fortune_container {
-  display: none;
+  display: flex;
   position: fixed;
-  z-index: 300;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
@@ -195,10 +206,11 @@
 }
 
 .fortune {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   background-color: rgba(255, 255, 255, .98);
   position: relative;
   margin: auto;
-  padding: 20px;
   width: 80%;
   max-width: 900px;
   aspect-ratio: 3/1;
@@ -228,7 +240,7 @@
 .fortune::after {
   height: 100%;
   top: 0;
-  z-index: 2;
+  pointer-events: none;
   background-repeat: no-repeat;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 1) .2%, rgba(0, 0, 0, .15) 0.5%, transparent 0.6%),
     linear-gradient(to left, rgba(255, 255, 255, 1) .2%, rgba(0, 0, 0, .15) 0.4%, transparent 0.6%),
@@ -238,10 +250,31 @@
   background-position: right top, left top, left top, right top;
 }
 
-.wallet_button_container {
-  position: fixed;
-  top: 0;
-  right: 0px;
+.fortune_result {
+  width: max-content;
+  margin: auto;
+  writing-mode: vertical-rl;
+  text-align: center;
+  font-size: 500%;
+  font-family: nagayama_kai08;
+  border: dashed 2px red;
+}
+
+.fortune_desc {
+  padding: 15px;
+  color: rgba(0, 0, 0, .9)
+}
+
+.fortune_share {
+  padding: 15px;
+  text-align: center;
+}
+
+.fortune_share_buttons {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -269,6 +302,16 @@
   100% {
     scale: 0;
     bottom: calc(50px + 25%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
