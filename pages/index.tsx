@@ -14,8 +14,16 @@ export default function Home() {
       <div className={styles.container}>
         <Head>
           <title>Solana lfg</title>
-          <meta name="description" content="kekw" />
+          <meta name="description" content="Shrine of Bonk" />
           <link rel="icon" href="/torii.svg" />
+          <meta property="og:title" content="Shrine of Bonk" />
+          <meta property="og:description" content="Get your fortune read at Hatsumode" />
+          <meta property="twitter:card" content="summary" />
+          <meta property="twitter:creator" content="@0xMiyu" />
+          <meta property="twitter:image" content="card.png" />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content="https://bonk-shrine.vercel.app/" />
+          <meta property="og:image" content="card.png" />
         </Head>
         <main className={styles.main}>
           <div className={styles.wallet_button_container}>
