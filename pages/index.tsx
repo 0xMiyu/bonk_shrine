@@ -37,7 +37,7 @@ export default function Home() {
           </div>
 
           <h1 id='werk' className={styles.title}>
-            Welcome to the Shrine of Bonk!
+            Welcome to the Shrine of Bonk!<br/>Toss in 50 Million $BONK to get your fortune!
           </h1>
 
           <RequestPay />
