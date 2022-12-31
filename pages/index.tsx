@@ -21,18 +21,18 @@ export default function Home() {
 
           <meta name="description" content="Get your fortune read at Hatsumode" />
 
-          <meta property="og:url" content="https://bonk-shrine.vercel.app/" />
+          <meta property="og:url" content="https://www.bonkshrine.com/" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Shrine of Bonk" />
           <meta property="og:description" content="Get your fortune read at Hatsumode" />
-          <meta property="og:image" content="https://bonk-shrine.vercel.app/card.png" />
+          <meta property="og:image" content="https://www.bonkshrine.com/" />
 
           <meta name="twitter:card" content="summary_large_image" />
-          <meta property="twitter:domain" content="bonk-shrine.vercel.app" />
-          <meta property="twitter:url" content="https://bonk-shrine.vercel.app/" />
+          <meta property="twitter:domain" content="https://www.bonkshrine.com/" />
+          <meta property="twitter:url" content="https://www.bonkshrine.com/" />
           <meta name="twitter:title" content="Shrine of Bonk" />
           <meta name="twitter:description" content="Get your fortune read at Hatsumode" />
-          <meta name="twitter:image" content="https://bonk-shrine.vercel.app/card.png" />
+          <meta name="twitter:image" content="https://www.bonkshrine.com/card.png" />
 
 
         </Head>
@@ -44,7 +44,7 @@ export default function Home() {
           <h1 id='werk' className={styles.title}>
             Welcome to the Shrine of Bonk!
           </h1>
-          <h2>Toss in 50 Million $BONK to get your fortune!</h2>
+          <h2>Toss in 3 Million $BONK to get your fortune!</h2>
 
           <RequestPay />
 
@@ -62,7 +62,7 @@ export default function Home() {
             </a>
              and 
             <a
-              href="https://twitter.com/thedylone"
+              href="https://github.com/thedylone"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -5,23 +5,26 @@ import { TwitterShareButton, TwitterIcon, TelegramShareButton, TelegramIcon, Wha
 export const FortuneElement: FC = () => {
   const fortune_results = ['大吉', '小吉', '吉', '末吉', '大凶', '小凶', '凶', '末凶'];
   const fortune_descriptions = [
-    '大吉 = "Big Luck" LFGGGG!', 
-    '小吉 = "Small Luck"', 
-    '吉 = "Luck" ', 
-    '末吉 = "Future Luck"', 
-    '大凶 = "Big Misfortune"', 
-    '小凶 = "Small Misfortune"', 
-    '凶 = ""Misfortune', 
-    '末凶 = "Future Misfortune"'];
+    '大吉 = "Big Luck"! LFGGGG! Looks like your immediate future is filled with fortune! Moon soon🔥', 
+    '小吉 = "Small Luck"! Might not be generational wealth just yet, but great days ahead! Enjoy yourself✨', 
+    '吉 = "Luck"! Things seem to be going your way! Enjoy the luck and remember to pay it forward anon🍀', 
+    '末吉 = "Future Luck"! Fortune is on the horizon! Pump might not be immediate but it might be time to HODL🚀', 
+    '大凶 = "Big Misfortune"! Watch your back anon, seems like things might be choppy in the near future, but this too shall pass🫡', 
+    '小凶 = "Small Misfortune"! Small inconveniences lie ahead, but nothing you can\'t handle anon! Relax and appreciate the real Ws🔍', 
+    '凶 = "Misfortune"! Some bad luck is in your immediate future so stay vigilant! Hang tight anon, April Showers bring May Flowers🌸', 
+    '末凶 = "Future Misfortune"! Steady anon, stormy clouds somewhere ahead; enjoy the moment but don\'t fumble generational wealth🚨'];
   const res = Math.floor(Math.random() * 8);
-  const shareUrl = "https://bonk-shrine.vercel.app/"
+  const shareUrl = "https://www.bonkshrine.com/"
   return (
     <div className={styles.fortune_container} style={{ zIndex: '5' }}>
       <div className={styles.fortune}>
         <div className={styles.fortune_cover}>
           <div className={styles.fortune_result}>{fortune_results[res]}</div>
         </div>
-        <div className={styles.fortune_desc}>{fortune_descriptions[res]}</div>
+        <div className={styles.fortune_desc}>
+            {fortune_descriptions[res]}
+            <img src="BonkLogo.webp"></img>
+        </div>
         <div className={styles.fortune_share}>
           <div className={styles.fortune_share_wrapper}>
             Share your fortune
@@ -31,7 +34,7 @@ export const FortuneElement: FC = () => {
                 title={"I got " + fortune_results[res] + " from the Shrine of Bonk!"}>
                 <TwitterIcon size={32} round />
               </TwitterShareButton>
-              <TelegramShareButton
+              {/* <TelegramShareButton
                 url={shareUrl}
                 title={"I got " + fortune_results[res] + " from the Shrine of Bonk!"}>
                 <TelegramIcon size={32} round />
@@ -48,7 +51,7 @@ export const FortuneElement: FC = () => {
                 body="Check out the Shrine of Bonk!"
                 >
                 <EmailIcon size={32} round />
-              </EmailShareButton>
+              </EmailShareButton> */}
             </div>
             <button className={styles.fortune_share_retry} onClick={() => window.location.reload()}>Retry</button>
           </div>
