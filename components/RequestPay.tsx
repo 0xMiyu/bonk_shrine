@@ -115,27 +115,36 @@ export const RequestPay: FC = () => {
                 <rect fill="#000000" stroke="#ffff56" strokeWidth="2" x="305" y="130" width="30" height="50" fillOpacity="0" id="svg_21" />
             </svg>
             <svg className={styles.shrine_box} width="320" height="240" preserveAspectRatio="xMidYMin" viewBox="0 0 640 480">
-                <defs>
-                    <linearGradient y2="0.81094" x2="1" y1="0" x1="0" spreadMethod="pad" id="svg_22">
-                        <stop offset="0" stopColor="#ffffff" />
-                        <stop offset="0.96901" stopOpacity="0.98047" stopColor="#d1d1d1" />
-                    </linearGradient>
-                </defs>
-                <rect id="svg_1" height="200" width="400" y="140" x="120" strokeWidth="0" stroke="#ff0000" fill="#7f3f00" />
-                <circle id="svg_2" r="40" cy="220" cx="320" strokeWidth="0" stroke="#ff0000" fill="#ffff00" />
-                <rect id="svg_3" height="25" width="425" y="115" x="107.5" strokeWidth="0" stroke="#ff0000" fill="#7f7f00" />
-                <rect id="svg_4" height="0" width="1" y="31.86667" x="671.33331" strokeWidth="0" stroke="#ff0000" fill="#7f7f00" />
-                <rect id="svg_8" height="230" width="20" y="140" x="115" strokeWidth="0" stroke="#ff0000" fill="#7f7f00" />
-                <rect id="svg_9" height="230" width="20" y="140" x="505" strokeWidth="0" stroke="#ff0000" fill="#7f7f00" />
-                <path id="svg_14" d="m114.33331,186.86667c27,6 30,11 61,12c34,-2 27,4 55,-1c18,-5 31,-8 48,-14c13,-5 26,-9 45,-8c21,3 34,11 50,18c18,7 36,11 57,9c23,-1 35,1 54,-2c27,-5 27,-2 40.66669,-13.86667" strokeWidth="7" stroke="#ff7f00" fill="none" />
-                <rect transform="rotate(45, 199.085, 219.795) translate(15, 2)" id="svg_16" height="34" width="17" y="200.79465" x="175.58481" strokeWidth="0" stroke="#ffffff" fill="url(#svg_22)" />
-                <rect id="svg_24" transform="rotate(45, 199.333, 243.867) translate(16, 1) translate(-1, 3) translate(6, -8) translate(-5.7518, 30.0721)" height="34" width="17" y="200.79465" x="175.58481" strokeWidth="0" stroke="#ffffff" fill="url(#svg_22)" />
-                <rect id="svg_25" transform="rotate(45, 199.085, 267.795) translate(16, 1) translate(-3, 6) translate(2, 43)" height="34" width="17" y="200.79465" x="175.58481" strokeWidth="0" stroke="#ffffff" fill="url(#svg_22)" />
-                <rect id="svg_26" transform="rotate(45, 199.085, 291.795) translate(16, 1) translate(-5, 8) translate(1, 5) translate(3, 60)" height="34" width="17" y="200.79465" x="175.58481" strokeWidth="0" stroke="#ffffff" fill="url(#svg_22)" />
-                <rect id="svg_27" transform="rotate(45, 430.333, 219.867) translate(246.248, 2.07205)" height="34" width="17" y="200.79465" x="175.58481" strokeWidth="0" stroke="#ffffff" fill="url(#svg_22)" />
-                <rect id="svg_28" transform="rotate(45, 430.085, 243.795) translate(246, 26)" height="34" width="17" y="200.79465" x="175.58481" strokeWidth="0" stroke="#ffffff" fill="url(#svg_22)" />
-                <rect id="svg_29" transform="rotate(45, 429.085, 268.795) translate(245, 51)" height="34" width="17" y="200.79465" x="175.58481" strokeWidth="0" stroke="#ffffff" fill="url(#svg_22)" />
-                <rect id="svg_30" transform="rotate(45, 431.085, 289.795) translate(247, 72)" height="34" width="17" y="200.79465" x="175.58481" strokeWidth="0" stroke="#ffffff" fill="url(#svg_22)" />
+                <path id="svg_2" d="m20.25,170l112.81251,-17.5l374.37505,0l112.31247,17.00001l-599.00003,0.49999z" strokeWidth="5" stroke="#7f3f00" fill="#3d1d00" />
+                <path id="svg_3" fillOpacity="0" d="m72.25,170l93.24203,-17.5l309.42925,0l92.82874,17.00001l-495.08676,0.49999z" strokeWidth="5" stroke="#7f3f00" fill="#000000" />
+                <path id="svg_4" fillOpacity="0" d="m117.75,170l76.11786,-17.5l252.60168,0l75.78047,17.00001l-404.16265,0.49999z" strokeWidth="5" stroke="#7f3f00" fill="#000000" />
+                <path id="svg_5" fillOpacity="0" d="m166.25,170l57.86463,-17.5l192.02723,0l57.60815,17.00001l-307.24354,0.49999z" strokeWidth="5" stroke="#7f3f00" fill="#000000" />
+                <path id="svg_6" fillOpacity="0" d="m213.25,170l40.17593,-17.5l133.32622,0l39.99785,17.00001l-213.32194,0.49999z" strokeWidth="5" stroke="#7f3f00" fill="#000000" />
+                <path id="svg_7" fillOpacity="0" d="m247.75,170l27.19167,-17.5l90.23718,0l27.07114,17.00001l-144.37948,0.49999z" strokeWidth="5" stroke="#7f3f00" fill="#000000" />
+                <path id="svg_8" fillOpacity="0" d="m276.25,170l16.46554,-17.5l54.64189,0l16.39256,17.00001l-87.42702,0.49999z" strokeWidth="5" stroke="#7f3f00" fill="#000000" />
+                <path id="svg_9" fillOpacity="0" d="m300.24999,170l7.43302,-17.5l24.66691,0l7.40007,17.00001l-39.46706,0.49999z" strokeWidth="5" stroke="#7f3f00" fill="#000000" />
+                <path id="svg_10" fillOpacity="0" d="m313.74999,170l2.35222,-17.5l7.80598,0l2.34179,17.00001l-12.48957,0.49999z" strokeWidth="5" stroke="#7f3f00" fill="#000000" />
+                <rect id="svg_11" height="255" width="560" y="190" x="40" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#7f3f00" />
+                <rect id="svg_12" height="215" width="520" y="190" x="60" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#9b6217" />
+                <rect id="svg_16" height="5" width="600" y="190" x="20" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#562900" />
+                <rect id="svg_17" height="20" width="600" y="170" x="20" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#7f3f00" />
+                <circle id="svg_18" r="50" cy="285" cx="320" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#7f3f00" />
+                <circle id="svg_14" r="50" cy="280" cx="320" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#f9d922" />
+                <circle id="svg_19" r="20" cy="255" cx="330" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#ffae00" />
+                <circle id="svg_20" r="20" cy="300" cx="335" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#ffae00" />
+                <circle id="svg_21" r="20" cy="280" cx="295" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#ffae00" />
+                <rect id="svg_22" fillOpacity="0" height="180" width="480" y="210" x="80" strokeWidth="5" stroke="#ffc116" fill="#000000" />
+                <rect id="svg_26" height="5" width="560" y="445" x="40" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#562900" />
+                <rect strokeOpacity="0" id="svg_23" height="35" width="50" y="445" x="30" strokeWidth="5" stroke="#000000" fill="#683607" />
+                <rect id="svg_24" strokeOpacity="0" height="35" width="50" y="445" x="560" strokeWidth="5" stroke="#000000" fill="#683607" />
+                <rect transform="rotate(45, 162.5, 265)" id="svg_28" height="50" width="25" y="240" x="150" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#e5e5e5" />
+                <rect id="svg_32" transform="rotate(45, 162.5, 285)" height="50" width="25" y="260" x="150" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#e5e5e5" />
+                <rect id="svg_33" transform="rotate(45, 162.5, 305)" height="50" width="25" y="280" x="150" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#e5e5e5" />
+                <rect id="svg_34" transform="rotate(45, 162.5, 325)" height="50" width="25" y="300" x="150" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#e5e5e5" />
+                <rect id="svg_35" transform="rotate(45, 472.5, 265)" height="50" width="25" y="240" x="460" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#e5e5e5" />
+                <rect id="svg_36" transform="rotate(45, 472.5, 285)" height="50" width="25" y="260" x="460" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#e5e5e5" />
+                <rect id="svg_37" transform="rotate(45, 472.5, 305)" height="50" width="25" y="280" x="460" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#e5e5e5" />
+                <rect id="svg_38" transform="rotate(45, 472.5, 325)" height="50" width="25" y="300" x="460" strokeOpacity="0" strokeWidth="5" stroke="#000000" fill="#e5e5e5" />
             </svg>
             <div className={styles.shrine__overlay}>
                 <img src="overlay.gif"></img>
