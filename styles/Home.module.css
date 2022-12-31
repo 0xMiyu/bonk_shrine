@@ -306,6 +306,9 @@
 }
 
 .fortune_share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background: var(--paper-bg);
   padding: 15px;
@@ -339,9 +342,10 @@
 
 .fortune_share_buttons {
   padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.fortune_share_buttons button {
+  margin: 0 5px;
 }
 
 .fortune_ribbon {
