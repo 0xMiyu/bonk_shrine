@@ -48,7 +48,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 400%;
 }
 
 .title,
@@ -124,7 +124,7 @@
   position: relative;
   text-align: center;
   width: 80%;
-  height: 80vh;
+  max-height: 80vh;
 }
 
 /* .shrine :first-child {
@@ -136,6 +136,8 @@
   position: relative;
   display: block;
   width: 100%;
+  height: auto;
+  max-height: 480px;
   animation: zoom 2s forwards ease-in-out, fadeIn 1s forwards ease-in-out;
 }
 
@@ -143,7 +145,7 @@
   position: absolute;
   display: block;
   width: 100%;
-  bottom: 75px;
+  bottom: 0;
   animation: zoom 2s forwards ease-in-out, fadeIn 1s forwards ease-in-out;
 }
 
@@ -196,21 +198,7 @@
   position: absolute;
   display: block;
   width: 100%;
-  bottom: 0;
-}
-
-.pay__button {
-  display: block;
-  height: 50px;
-  margin: auto;
-  padding: .5rem;
-  background: #a6a6a6;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  top: 100%;
 }
 
 .fortune_container {
@@ -318,6 +306,9 @@
 }
 
 .fortune_share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background: var(--paper-bg);
   padding: 15px;
@@ -351,15 +342,17 @@
 
 .fortune_share_buttons {
   padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.fortune_share_buttons button {
+  margin: 0 5px;
 }
 
 .fortune_ribbon {
   position: absolute;
   width: 40%;
   max-width: 450px;
+  height: auto;
   animation: drop 1s forwards ease-in-out 0.5s, fadeOut 0.5s forwards ease-in 0.5s;
 }
 
@@ -416,17 +409,17 @@
 @keyframes throw_coin {
   0% {
     scale: 1;
-    bottom: 50px;
+    bottom: 0;
   }
 
   40% {
     scale: 0.6;
-    bottom: calc(50px + 50%);
+    bottom: 50%;
   }
 
   100% {
     scale: 0;
-    bottom: calc(50px + 25%);
+    bottom: 25%;
   }
 }
 
