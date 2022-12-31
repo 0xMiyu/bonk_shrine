@@ -4,7 +4,15 @@ import { TwitterShareButton, TwitterIcon } from 'react-share';
 
 export const FortuneElement: FC = () => {
     const fortune_results = ['大吉', '小吉', '吉', '末吉', '大凶', '小凶', '凶', '末凶'];
-    const fortune_descriptions = ['4', '3', '2', '1', '-4', '-3', '-2', '-1'];
+    const fortune_descriptions = [
+        '大吉 = "Big Luck" LFGGGG!', 
+        '小吉 = "Small Luck"', 
+        '吉 = "Luck" ', 
+        '末吉 = "Future Luck"', 
+        '大凶 = "Big Misfortune"', 
+        '小凶 = "Small Misfortune"', 
+        '凶 = ""Misfortune', 
+        '末凶 = "Future Misfortune"'];
     const res = Math.floor(Math.random() * 8);
     return(
         <div className={styles.fortune_container} style={{zIndex:'5'}}>

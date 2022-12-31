@@ -14,7 +14,7 @@ export default function Home() {
     <ContextProvider>
       <div className={styles.container}>
         <Head>
-          <title>Solana lfg</title>
+          <title>Bonk Shrine</title>
           <meta name="description" content="kekw" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
