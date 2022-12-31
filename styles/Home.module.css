@@ -127,24 +127,24 @@
   height: 80vh;
 }
 
-.shrine :first-child {
+/* .shrine :first-child {
   position: relative;
   display: block;
-}
-
-.shrine svg {
-  display: block;
-  animation: zoom 2s forwards ease-in-out, fadeIn 1s forwards ease-in-out;
-}
+} */
 
 .shrine_tori {
+  position: relative;
+  display: block;
   width: 100%;
+  animation: zoom 2s forwards ease-in-out, fadeIn 1s forwards ease-in-out;
 }
 
 .shrine_box {
   position: absolute;
+  display: block;
   width: 100%;
   bottom: 75px;
+  animation: zoom 2s forwards ease-in-out, fadeIn 1s forwards ease-in-out;
 }
 
 @keyframes zoom {

@@ -10,7 +10,7 @@ import { FC, useCallback, useState, useRef, createElement } from "react";
 import { getAssociatedTokenAddress, createTransferCheckedInstruction } from "@solana/spl-token";
 import { useOutsideAlerter } from "./kewk";
 import styles from '../styles/Home.module.css'
-import {createRoot} from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import { FortuneElement } from "./fortune";
 
 
@@ -65,7 +65,7 @@ export const RequestPay: FC = () => {
             alert("Transaction Confirmed!");
             let root_element = document.getElementById('coin_div');
             let root = createRoot(root_element!)
-            const coin_element = createElement('img', {className:styles.coin, src:"BonkLogo.webp"});
+            const coin_element = createElement('img', { className: styles.coin, src: "BonkLogo.webp" });
             root.render(coin_element)
             setTimeout(() => {
                 root.unmount();
@@ -73,8 +73,8 @@ export const RequestPay: FC = () => {
                 root = createRoot(root_element!)
                 const Fortune = createElement(FortuneElement)
                 root.render(Fortune);
-              }, 2000)
-            
+            }, 2000)
+
 
             // setComponents([...components, "Sample Component"])
 
@@ -93,22 +93,26 @@ export const RequestPay: FC = () => {
             <div id='coin_div'></div>
             <div id='fortune_div'></div>
             <svg className={styles.shrine_tori} width="640" height="480" preserveAspectRatio="xMidYMin" viewBox="0 0 640 480">
-                <rect id="svg_29" height="12" width="486" y="66.86667" x="84.53333"
-                    strokeWidth="5" stroke="#000000" fill="#3f3f3f" />
-                <rect id="svg_30" height="12" width="470" y="82.86667" x="90.53333"
-                    strokeWidth="5" stroke="#000000" fill="#ff0000" />
-                <rect id="svg_31" height="18" width="471" y="127.86667" x="89.53333"
-                    strokeWidth="5" stroke="#000000" fill="#ff0000" />
-                <rect id="svg_32" height="297" width="25" y="94.86667" x="153.53333"
-                    strokeWidth="5" stroke="#000000" fill="#ff0000" />
-                <rect id="svg_33" height="303" width="28" y="94.86667" x="476.53333"
-                    strokeWidth="5" stroke="#000000" fill="#ff0000" />
-                <rect id="svg_34" height="31" width="21" y="95.86667" x="323.53333"
-                    strokeWidth="5" stroke="#000000" fill="#ff0000" />
-                <rect id="svg_35" height="33" width="38" y="389.86667" x="146.53333"
-                    strokeWidth="5" stroke="#000000" fill="#000000" />
-                <rect id="svg_37" height="33" width="38" y="395.2" x="471.2"
-                    strokeWidth="5" stroke="#000000" fill="#000000" />
+                <path fill="#333333" stroke="#000000" strokeWidth="9" d="m0.66669,70.66666c101.33334,30.33334 288.66666,30 320.66666,30c32,0 220,1 318,-31" id="svg_4" />
+                <path fill="#000000" stroke="#ff0000" strokeWidth="16" d="m0.66666,82.66666c101.33334,30.33334 288.66666,30 320.66666,30c32,0 220,1 318,-31" fillOpacity="0" id="svg_5" />
+                <path fill="#000000" stroke="#bf0000" strokeWidth="4" d="m0.66666,92.66666c101.33334,30.33334 288.66666,30 320.66666,30c32,0 220,1 318,-31" fillOpacity="0" id="svg_6" />
+                <rect fill="#ff0000" stroke="#000000" strokeWidth="3" x="10" y="180" width="620" height="20" id="svg_7" strokeOpacity="0" />
+                <rect fill="#bf0000" stroke="#000000" strokeWidth="3" x="15" y="200" width="610" height="3" strokeOpacity="0" id="svg_8" />
+                <rect fill="#ff0000" stroke="#000000" strokeWidth="3" strokeOpacity="0" x="100" y="110" width="40" height="350" id="svg_10" transform="rotate(3, 120, 285)" />
+                <rect fill="#ff0000" stroke="#000000" strokeWidth="3" strokeOpacity="0" x="500" y="110" width="40" height="350" transform="rotate(-3, 520, 285)" id="svg_11" />
+                <path fill="#ff0000" stroke="#000000" strokeWidth="2" d="m71,180l0,-13.99999l50.99999,13.99999l-50.99999,0z" id="svg_22" strokeOpacity="0" />
+                <path fill="#ff0000" stroke="#000000" strokeWidth="2" d="m461.00001,179.99999l0,-13.99999l50.99999,13.99999l-50.99999,0z" strokeOpacity="0" id="svg_24" />
+                <path fill="#ff0000" stroke="#000000" strokeWidth="2" d="m184.00001,180l0,-13.99999l-53.00001,13.99999l53.00001,0z" strokeOpacity="0" id="svg_25" />
+                <rect fill="#ff7f00" stroke="#000000" strokeWidth="3" strokeOpacity="0" x="140" y="110" width="3" height="350" transform="rotate(3, 141.5, 285)" id="svg_12" />
+                <rect fill="#ff7f00" stroke="#000000" strokeWidth="3" strokeOpacity="0" x="497" y="110" width="3" height="350" transform="rotate(-3, 498.5, 285)" id="svg_13" />
+                <rect fill="#4c4c4c" stroke="#000000" strokeWidth="3" strokeOpacity="0" x="80" y="420" width="60" height="5" id="svg_14" />
+                <rect fill="#191919" stroke="#000000" strokeWidth="3" strokeOpacity="0" x="75" y="425" width="70" height="55" id="svg_19" />
+                <rect fill="#191919" stroke="#000000" strokeWidth="3" strokeOpacity="0" x="495" y="425" width="70" height="55" id="svg_18" />
+                <rect fill="#4c4c4c" stroke="#000000" strokeWidth="3" strokeOpacity="0" x="500" y="420" width="60" height="5" id="svg_17" />
+                <path fill="#ff0000" stroke="#000000" strokeWidth="2" d="m564.00004,180l0,-13.99999l-53.00001,13.99999l53.00001,0z" strokeOpacity="0" id="svg_26" />
+                <rect fill="#bf0000" stroke="#000000" strokeWidth="3" strokeOpacity="0" x="292.50001" y="180" width="55" height="12" id="svg_27" />
+                <rect fill="#191919" stroke="#000000" strokeWidth="3" strokeOpacity="0" x="295" y="120" width="50" height="70" id="svg_20" />
+                <rect fill="#000000" stroke="#ffff56" strokeWidth="2" x="305" y="130" width="30" height="50" fillOpacity="0" id="svg_21" />
             </svg>
             <svg className={styles.shrine_box} width="320" height="240" preserveAspectRatio="xMidYMin" viewBox="0 0 640 480">
                 <defs>
