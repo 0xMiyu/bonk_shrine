@@ -42,22 +42,34 @@ export default function Home() {
           </div>
 
           <h1 id='werk' className={styles.title}>
-            Welcome to the Shrine of Bonk!<br/>Toss in 50 Million $BONK to get your fortune!
+            Welcome to the Shrine of Bonk!
           </h1>
+          <h2>Toss in 50 Million $BONK to get your fortune!</h2>
 
           <RequestPay />
 
         </main>
 
-        {/* <footer className={styles.footer}>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            kmskmskmskmskms
-          </a>
-        </footer> */}
+        <footer className={styles.footer}>
+          <p>
+            built and designed by 
+            <a
+              href="https://twitter.com/0xMiyu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @0xMiyu
+            </a>
+             and 
+            <a
+              href="https://twitter.com/thedylone"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @thedylone
+            </a>
+          </p>
+        </footer>
       </div>
     </ContextProvider>
   )
