@@ -15,6 +15,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  --paper-bg: rgba(255, 255, 255, .98);
 }
 
 .footer {
@@ -132,8 +133,28 @@
 }
 
 .shrine svg {
-  width: 100%;
   display: block;
+  animation: zoom 2s forwards ease-in-out, fadeIn 1s forwards ease-in-out;
+}
+
+.shrine_tori {
+  width: 100%;
+}
+
+.shrine_box {
+  position: absolute;
+  width: 100%;
+  bottom: 75px;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .shrine__overlay {
@@ -143,6 +164,7 @@
   top: 0;
   left: 0;
   mix-blend-mode: screen;
+  animation: fadeIn 2s forwards ease-in-out;
 }
 
 .shrine__overlay img {
@@ -193,13 +215,14 @@
 
 .fortune_container {
   display: flex;
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
   background: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
@@ -208,7 +231,7 @@
 .fortune {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color: rgba(255, 255, 255, .98);
+  /* background-color: var(--paper-bg); */
   position: relative;
   margin: auto;
   width: 80%;
@@ -246,28 +269,84 @@
     linear-gradient(to left, rgba(255, 255, 255, 1) .2%, rgba(0, 0, 0, .15) 0.4%, transparent 0.6%),
     linear-gradient(265deg, rgba(0, 0, 0, .2), transparent 10%),
     linear-gradient(-265deg, rgba(0, 0, 0, .2), transparent 10%);
-  background-size: 33% 100%, 33% 100%, 67% 100%, 67% 100%;
+  background-size: 33.33% 100%, 33.33% 100%, 66.67% 100%, 66.67% 100%;
   background-position: right top, left top, left top, right top;
+}
+
+.fortune_cover {
+  background: var(--paper-bg);
+  font-family: nagayama_kai08;
+  writing-mode: vertical-rl;
+  animation: flipLeft 2s forwards ease-in-out 1s;
+  transform: rotate3d(0, 1, 0, 180deg);
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  transform-origin: right center;
+  backface-visibility: hidden;
+  display: flex;
+}
+
+.fortune_cover::after {
+  content: '';
+  font-size: 200%;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: var(--paper-bg);
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  backface-visibility: hidden;
 }
 
 .fortune_result {
   width: max-content;
   margin: auto;
-  writing-mode: vertical-rl;
   text-align: center;
   font-size: 500%;
-  font-family: nagayama_kai08;
   border: dashed 2px red;
+
 }
 
 .fortune_desc {
+  background: var(--paper-bg);
   padding: 15px;
   color: rgba(0, 0, 0, .9)
 }
 
 .fortune_share {
+  position: relative;
+  background: var(--paper-bg);
   padding: 15px;
   text-align: center;
+  animation: flipRight 2s forwards ease-in-out 1s;
+  transform: rotate3d(0, 1, 0, 180deg);
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  transform-origin: left center;
+  backface-visibility: hidden;
+}
+
+.fortune_share::after {
+  content: 'おみくじ';
+  font-size: 250%;
+  font-family: nagayama_kai08;
+  writing-mode: vertical-rl;
+  padding: 0 40%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: -100%;
+  width: 20%;
+  height: 100%;
+  background: var(--paper-bg);
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transform-origin: right center;
+  backface-visibility: hidden;
 }
 
 .fortune_share_buttons {
@@ -277,6 +356,52 @@
   align-items: center;
 }
 
+.fortune_ribbon {
+  position: absolute;
+  width: 40%;
+  max-width: 450px;
+  animation: drop 1s forwards ease-in-out 0.5s, fadeOut 0.5s forwards ease-in 0.5s;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flipLeft {
+  0% {
+    transform: rotateY(-180deg)
+  }
+
+  100% {
+    transform: rotateY(0)
+  }
+}
+
+@keyframes flipRight {
+  0% {
+    transform: rotateY(180deg)
+  }
+
+  100% {
+    transform: rotateY(0)
+  }
+}
 
 @keyframes spin {
   0% {
