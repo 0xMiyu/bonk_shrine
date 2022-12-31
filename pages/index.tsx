@@ -20,10 +20,10 @@ export default function Home() {
           <meta property="og:description" content="Get your fortune read at Hatsumode" />
           <meta property="twitter:card" content="summary" />
           <meta property="twitter:creator" content="@0xMiyu" />
-          <meta property="twitter:image" content="card.png" />
+          <meta property="twitter:image" content="https://bonk-shrine.vercel.app/card.png" />
           <meta property="og:type" content="article" />
           <meta property="og:url" content="https://bonk-shrine.vercel.app/" />
-          <meta property="og:image" content="card.png" />
+          <meta property="og:image" content="https://bonk-shrine.vercel.app/card.png" />
         </Head>
         <main className={styles.main}>
           <div className={styles.wallet_button_container}>
