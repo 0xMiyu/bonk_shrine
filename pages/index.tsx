@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { ContextProvider } from '../contexts/ContextProvider';
 import { RequestPay } from '../components/RequestPay';
-// import { FortuneElement } from '../components/fortune';
+import { WalletBalance } from '../components/walletBalance';
 require('@solana/wallet-adapter-react-ui/styles.css');
 
 
@@ -44,10 +44,11 @@ export default function Home() {
           <h1 id='werk' className={styles.title}>
             Welcome to the Shrine of Bonk!
           </h1>
-          <h2>Toss in 3 Million $BONK to get your fortune!</h2>
-
+          
+          <h2>Toss in 2 Million $BONK to get your fortune!</h2>
+          <WalletBalance/>
           <RequestPay />
-
+          
         </main>
 
         <footer className={styles.footer}>

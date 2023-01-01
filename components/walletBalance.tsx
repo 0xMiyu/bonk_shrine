@@ -1,58 +1,38 @@
-import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import {
-    Transaction,
-    LAMPORTS_PER_SOL,
-    TransactionSignature,
-    SystemProgram,
     PublicKey,
-    Keypair,
-    GetProgramAccountsFilter,
-    Connection,
+    Connection
 } from "@solana/web3.js";
-import { FC, useCallback, useState, useRef, createElement } from "react";
-import {
-    getAssociatedTokenAddress,
-    createTransferCheckedInstruction,
-    TOKEN_PROGRAM_ID,
-} from "@solana/spl-token";
-import { useOutsideAlerter } from "./kewk";
-import styles from "../styles/Home.module.css";
-import { createRoot } from "react-dom/client";
-import { FortuneElement } from "./fortune";
+import { FC, useState, useEffect } from "react";
 
-export const walletBalance: FC = () => {
-    const RECEIVING_BONK_ATA = "5rmWy289CSN1XbHeRRQLwiv6ed3k64ipgKCzdpoFAX3E";
-    const MINT_TO_SEARCH = "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263";
-    const WALLET_TO_SEARCH = "FkvNBs5TruvbAuUkrKdBXZW9zJSrRi6ZrV8n5Fjnad7F";
+
+export const WalletBalance: FC = () => {
+    const RECEIVING_BONK_ATA = "B7Zw8g26Pdtm9zBFkkyqurhE9mwVLKgg45U2RfnEjmoA";
+    // const BONK_MINT = "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263";
+    const RECEIVING_WALLET = "AoyyDYXKjvF1ooTvRRgUgRU2tAf9dvt23AgHk7tco5a9";
     const rpcEndpoint = 'https://rpc.helius.xyz/?api-key=60219cb7-35dc-425a-928b-c7be0fc8ebf4';
     const solanaConnection = new Connection(rpcEndpoint)
-    async function getTokenAccounts(
-        wallet: string,
-        solanaConnection: Connection
-    ) {
-        const filters: GetProgramAccountsFilter[] = [
-            {
-                dataSize: 165, //size of account (bytes)
-            },
-            {
-                memcmp: {
-                    offset: 32, //location of our query in the account (bytes)
-                    bytes: wallet, //our search criteria, a base58 encoded string
-                },
-            },
-            //Add this search parameter
-            {
-                memcmp: {
-                    offset: 0, //number of bytes
-                    bytes: MINT_TO_SEARCH, //base58 encoded string
-                },
-            },
-        ];
-    }
-    // const res = await solanaConnection.getParsedProgramAccounts(
-    //     TOKEN_PROGRAM_ID,   //SPL Token Program, new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
-    //     {filters: filters}
-    // )
 
-    return (<div></div>);
+    const [balance, setBalance] = useState([] as any);
+    useEffect  (() => {
+        const load_response = async () => {
+            const response = await solanaConnection.getParsedAccountInfo(new PublicKey(RECEIVING_BONK_ATA))
+            // console.log("RESPONSE")
+            const response_data : any = response.value?.data
+            // console.log(response_data!.parsed.info.tokenAmount.uiAmount)
+            setBalance(response_data!.parsed.info.tokenAmount.uiAmount);
+            
+        }
+        load_response();
+        
+    }, [])
+    
+    
+    
+
+    return (
+        <div>
+            <h3>Wallet Address: {RECEIVING_WALLET}</h3>
+            <h3>Wallet Balance: {balance} $BONK</h3>
+        </div>
+    );
 };

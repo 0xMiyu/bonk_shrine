@@ -20,12 +20,9 @@ export const RequestPay: FC = () => {
     const { publicKey, sendTransaction } = useWallet();
 
     const BONK_TOKEN_ADDRESS = "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263";
-    const BONK_COST = 3000000;
+    const BONK_COST = 2000000;
     const BONK_DECIMALS = 5;
-    const RECEIVING_BONK_ATA = "5rmWy289CSN1XbHeRRQLwiv6ed3k64ipgKCzdpoFAX3E";
-    const [components, setComponents] = useState([""]);
-    const wrapperRef = useRef(null);
-    useOutsideAlerter(wrapperRef);
+    const RECEIVING_BONK_ATA = "B7Zw8g26Pdtm9zBFkkyqurhE9mwVLKgg45U2RfnEjmoA";
 
     const onClick = useCallback(async () => {
         if (!publicKey) {
