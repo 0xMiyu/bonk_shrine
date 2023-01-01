@@ -8,7 +8,7 @@ export default function Document() {
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <link rel="icon" href="/torii.svg" />
 
-                <meta name="description" content="Get your fortune read at Hatsumode" />
+                <meta name="description" content="Get your fortune read for $BONK at 初詣" />
 
                 <meta key="og_url" property="og:url" content="https://www.bonkshrine.com/" />
                 <meta key="og_type" property="og:type" content="website" />

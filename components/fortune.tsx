@@ -1,6 +1,6 @@
 import { FC, useCallback, useState, useRef, createElement } from "react";
 import styles from '../styles/Home.module.css'
-import { TwitterShareButton, TwitterIcon, TelegramShareButton, TelegramIcon, WhatsappShareButton, WhatsappIcon, EmailShareButton, EmailIcon } from 'react-share';
+import { TwitterShareButton, TwitterIcon, TelegramShareButton, TelegramIcon, WhatsappShareButton, WhatsappIcon, EmailShareButton, EmailIcon, WeiboShareButton, WeiboIcon } from 'react-share';
 
 export const FortuneElement: FC = () => {
   const fortune_results = ['大吉', '小吉', '吉', '末吉', '大凶', '小凶', '凶', '末凶'];
@@ -34,7 +34,7 @@ export const FortuneElement: FC = () => {
                 title={"I got " + fortune_results[res] + " from the Shrine of Bonk!"}>
                 <TwitterIcon size={32} round />
               </TwitterShareButton>
-              {/* <TelegramShareButton
+              <TelegramShareButton
                 url={shareUrl}
                 title={"I got " + fortune_results[res] + " from the Shrine of Bonk!"}>
                 <TelegramIcon size={32} round />
@@ -42,16 +42,21 @@ export const FortuneElement: FC = () => {
               <WhatsappShareButton
                 url={shareUrl}
                 title={"I got " + fortune_results[res] + " from the Shrine of Bonk!"}
-                separator=":: ">
+                separator=": ">
                 <WhatsappIcon size={32} round />
               </WhatsappShareButton>
+              <WeiboShareButton
+                url={shareUrl}
+                title={"I got " + fortune_results[res] + " from the Shrine of Bonk!"}>
+                <WeiboIcon size={32} round />
+              </WeiboShareButton>
               <EmailShareButton
                 url={shareUrl}
                 subject={"I got " + fortune_results[res] + " from the Shrine of Bonk!"}
                 body="Check out the Shrine of Bonk!"
                 >
                 <EmailIcon size={32} round />
-              </EmailShareButton> */}
+              </EmailShareButton>
             </div>
             <button className={styles.fortune_share_retry} onClick={() => window.location.reload()}>Retry</button>
           </div>
