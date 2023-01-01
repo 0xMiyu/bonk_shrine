@@ -19,22 +19,6 @@ export default function Home() {
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <link rel="icon" href="/torii.svg" />
 
-          <meta name="description" content="Get your fortune read at Hatsumode" />
-
-          <meta property="og:url" content="https://www.bonkshrine.com/" />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content="Shrine of Bonk" />
-          <meta property="og:description" content="Get your fortune read at Hatsumode" />
-          <meta property="og:image" content="https://www.bonkshrine.com/" />
-
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta property="twitter:domain" content="https://www.bonkshrine.com/" />
-          <meta property="twitter:url" content="https://www.bonkshrine.com/" />
-          <meta name="twitter:title" content="Shrine of Bonk" />
-          <meta name="twitter:description" content="Get your fortune read at Hatsumode" />
-          <meta name="twitter:image" content="https://www.bonkshrine.com/card.png" />
-
-
         </Head>
         <main className={styles.main}>
           <div className={styles.wallet_button_container}>
@@ -53,7 +37,7 @@ export default function Home() {
 
         <footer className={styles.footer}>
           <p>
-            built and designed by 
+            built and designed by
             <a
               href="https://twitter.com/0xMiyu"
               target="_blank"
@@ -61,7 +45,7 @@ export default function Home() {
             >
               @0xMiyu
             </a>
-             and 
+            and
             <a
               href="https://github.com/thedylone"
               target="_blank"
