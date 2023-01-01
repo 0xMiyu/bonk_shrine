@@ -27,31 +27,31 @@ export const RequestPay: FC = () => {
         const transaction = new Transaction();
         try {
 
-            // const source_account = await getAssociatedTokenAddress(
-            //     new PublicKey(BONK_TOKEN_ADDRESS),
-            //     publicKey
-            // )
+            const source_account = await getAssociatedTokenAddress(
+                new PublicKey(BONK_TOKEN_ADDRESS),
+                publicKey
+            )
 
-            // const ix = createTransferCheckedInstruction(
-            //     source_account,
-            //     new PublicKey(BONK_TOKEN_ADDRESS),
-            //     new PublicKey(RECEIVING_BONK_ATA),
-            //     publicKey,
-            //     BONK_COST * Math.pow(10, BONK_DECIMALS),
-            //     BONK_DECIMALS
-            // );
-            // transaction.add(ix);
+            const ix = createTransferCheckedInstruction(
+                source_account,
+                new PublicKey(BONK_TOKEN_ADDRESS),
+                new PublicKey(RECEIVING_BONK_ATA),
+                publicKey,
+                BONK_COST * Math.pow(10, BONK_DECIMALS),
+                BONK_DECIMALS
+            );
+            transaction.add(ix);
 
-            // const tx = await sendTransaction(transaction, connection);
-            // await connection.confirmTransaction({
-            //     blockhash: (
-            //         await connection.getLatestBlockhash("max")
-            //     ).blockhash,
-            //     lastValidBlockHeight: (
-            //         await connection.getLatestBlockhash("max")
-            //     ).lastValidBlockHeight,
-            //     signature: tx,
-            // });
+            const tx = await sendTransaction(transaction, connection);
+            await connection.confirmTransaction({
+                blockhash: (
+                    await connection.getLatestBlockhash("max")
+                ).blockhash,
+                lastValidBlockHeight: (
+                    await connection.getLatestBlockhash("max")
+                ).lastValidBlockHeight,
+                signature: tx,
+            });
             alert("Transaction Confirmed!");
             let root_element = document.getElementById('coin_div');
             let root = createRoot(root_element!)
