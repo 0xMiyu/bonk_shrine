@@ -31,8 +31,8 @@ export const WalletBalance: FC = () => {
 
     return (
         <div>
-            <h3>Wallet Address: {RECEIVING_WALLET}</h3>
-            <h3>Wallet Balance: {balance} $BONK</h3>
+            <p><a href="https://solana.fm/address/AoyyDYXKjvF1ooTvRRgUgRU2tAf9dvt23AgHk7tco5a9" target="_blank">Wallet Address: {RECEIVING_WALLET}</a></p>
+            <p>Wallet Balance: {balance} $BONK</p>
         </div>
     );
 };

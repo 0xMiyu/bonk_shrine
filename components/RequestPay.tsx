@@ -75,7 +75,7 @@ export const RequestPay: FC = () => {
 
             // setComponents([...components, "Sample Component"])
 
-            console.log("fuck")
+            // console.log("fuck")
 
 
         } catch (error: any) {
@@ -87,29 +87,31 @@ export const RequestPay: FC = () => {
     return (
         // <div ref={wrapperRef}>
         <div className={styles.shrine}>
-            <svg className={styles.shrine_tori} width="640" height="480" preserveAspectRatio="xMidYMin" viewBox="0 0 640 480"> <g>
-                <title>Layer 1</title>
-                <path id="svg_4" d="m0.66669,70.66666c101.33334,30.33334 288.66666,30 320.66666,30c32,0 220,1 318,-31" strokeWidth="9" stroke="#000000" fill="#333333" />
-                <path id="svg_5" fillOpacity="0" d="m0.66666,82.66666c101.33334,30.33334 288.66666,30 320.66666,30c32,0 220,1 318,-31" strokeWidth="16" stroke="#ff0000" fill="#000000" />
-                <path id="svg_6" fillOpacity="0" d="m0.66666,92.66666c101.33334,30.33334 288.66666,30 320.66666,30c32,0 220,1 318,-31" strokeWidth="4" stroke="#bf0000" fill="#000000" />
-                <rect strokeOpacity="0" id="svg_7" height="20" width="620" y="180" x="10" strokeWidth="3" stroke="#000000" fill="#ff0000" />
-                <rect id="svg_8" strokeOpacity="0" height="3" width="610" y="200" x="15" strokeWidth="3" stroke="#000000" fill="#bf0000" />
-                <rect transform="rotate(3, 120, 285)" id="svg_10" height="350" width="40" y="110" x="100" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#ff0000" />
-                <rect id="svg_11" transform="rotate(-3, 520, 285)" height="350" width="40" y="110" x="500" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#ff0000" />
-                <path strokeOpacity="0" id="svg_22" d="m71,180l0,-13.99999l50.99999,13.99999l-50.99999,0z" strokeWidth="2" stroke="#000000" fill="#ff0000" />
-                <path id="svg_24" strokeOpacity="0" d="m461.00001,179.99999l0,-13.99999l50.99999,13.99999l-50.99999,0z" strokeWidth="2" stroke="#000000" fill="#ff0000" />
-                <path id="svg_25" strokeOpacity="0" d="m184.00001,180l0,-13.99999l-53.00001,13.99999l53.00001,0z" strokeWidth="2" stroke="#000000" fill="#ff0000" />
-                <rect id="svg_12" transform="rotate(3, 141.5, 285)" height="350" width="3" y="110" x="140" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#ff7f00" />
-                <rect id="svg_13" transform="rotate(-3, 498.5, 285)" height="350" width="3" y="110" x="497" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#ff7f00" />
-                <rect id="svg_14" height="5" width="60" y="420" x="80" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#4c4c4c" />
-                <rect id="svg_19" height="55" width="70" y="425" x="75" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#191919" />
-                <rect id="svg_18" height="55" width="70" y="425" x="495" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#191919" />
-                <rect id="svg_17" height="5" width="60" y="420" x="500" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#4c4c4c" />
-                <path id="svg_26" strokeOpacity="0" d="m564.00004,180l0,-13.99999l-53.00001,13.99999l53.00001,0z" strokeWidth="2" stroke="#000000" fill="#ff0000" />
-                <rect id="svg_27" height="12" width="55" y="180" x="292.50001" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#bf0000" />
-                <rect id="svg_20" height="70" width="50" y="120" x="295" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#191919" />
-                <rect id="svg_21" fillOpacity="0" height="50" width="30" y="130" x="305" strokeWidth="2" stroke="#ffff56" fill="#000000" />
-            </g>
+            <svg className={styles.shrine_tori} width="640" height="480" preserveAspectRatio="xMidYMin" viewBox="0 0 640 480">
+                <g>
+                    <title>Layer 1</title>
+                    <path id="svg_4" d="m0.66669,70.66666c101.33334,30.33334 288.66666,30 320.66666,30c32,0 220,1 318,-31" strokeWidth="9" stroke="#000000" fill="#333333" />
+                    <path id="svg_5" fillOpacity="0" d="m0.66666,82.66666c101.33334,30.33334 288.66666,30 320.66666,30c32,0 220,1 318,-31" strokeWidth="16" stroke="#ff0000" fill="#000000" />
+                    <path id="svg_6" fillOpacity="0" d="m0.66666,92.66666c101.33334,30.33334 288.66666,30 320.66666,30c32,0 220,1 318,-31" strokeWidth="4" stroke="#bf0000" fill="#000000" />
+                    <rect strokeOpacity="0" id="svg_7" height="20" width="620" y="180" x="10" strokeWidth="3" stroke="#000000" fill="#ff0000" />
+                    <rect id="svg_8" strokeOpacity="0" height="3" width="610" y="200" x="15" strokeWidth="3" stroke="#000000" fill="#bf0000" />
+                    <rect transform="rotate(3, 120, 285)" id="svg_10" height="350" width="40" y="110" x="100" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#ff0000" />
+                    <rect id="svg_11" transform="rotate(-3, 520, 285)" height="350" width="40" y="110" x="500" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#ff0000" />
+                    <path strokeOpacity="0" id="svg_22" d="m71,180l0,-13.99999l50.99999,13.99999l-50.99999,0z" strokeWidth="2" stroke="#000000" fill="#ff0000" />
+                    <path id="svg_24" strokeOpacity="0" d="m461.00001,179.99999l0,-13.99999l50.99999,13.99999l-50.99999,0z" strokeWidth="2" stroke="#000000" fill="#ff0000" />
+                    <path id="svg_25" strokeOpacity="0" d="m184.00001,180l0,-13.99999l-53.00001,13.99999l53.00001,0z" strokeWidth="2" stroke="#000000" fill="#ff0000" />
+                    <rect id="svg_12" transform="rotate(3, 141.5, 285)" height="350" width="3" y="110" x="140" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#ff7f00" />
+                    <rect id="svg_13" transform="rotate(-3, 498.5, 285)" height="350" width="3" y="110" x="497" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#ff7f00" />
+                    <rect id="svg_14" height="5" width="60" y="420" x="80" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#4c4c4c" />
+                    <rect id="svg_19" height="55" width="70" y="425" x="75" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#191919" />
+                    <rect id="svg_18" height="55" width="70" y="425" x="495" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#191919" />
+                    <rect id="svg_17" height="5" width="60" y="420" x="500" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#4c4c4c" />
+                    <path id="svg_26" strokeOpacity="0" d="m564.00004,180l0,-13.99999l-53.00001,13.99999l53.00001,0z" strokeWidth="2" stroke="#000000" fill="#ff0000" />
+                    <rect id="svg_27" height="12" width="55" y="180" x="292.50001" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#bf0000" />
+                    <rect id="svg_20" height="90" width="70" y="110" x="285" strokeOpacity="0" strokeWidth="3" stroke="#000000" fill="#191919" />
+                    <rect id="svg_21" fillOpacity="0" height="70" width="50" y="120" x="295" strokeWidth="2" stroke="#ffff56" fill="#000000" />
+                    <image href="/BonkLogo.webp" height="50" width="50" y="130" x="295" />
+                </g>
                 <g>
                     <title>Layer 2</title>
                     <g id="svg_1">

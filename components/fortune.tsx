@@ -16,14 +16,14 @@ export const FortuneElement: FC = () => {
   const res = Math.floor(Math.random() * 8);
   const shareUrl = "https://www.bonkshrine.com/"
   return (
-    <div className={styles.fortune_container} style={{ zIndex: '5' }}>
+    <div className={styles.fortune_container}>
       <div className={styles.fortune}>
         <div className={styles.fortune_cover}>
           <div className={styles.fortune_result}>{fortune_results[res]}</div>
         </div>
         <div className={styles.fortune_desc}>
             {fortune_descriptions[res]}
-            <img src="BonkLogo.webp"></img>
+            <img className={styles.fortune_desc_logo} src="BonkLogo.webp"></img>
         </div>
         <div className={styles.fortune_share}>
           <div className={styles.fortune_share_wrapper}>

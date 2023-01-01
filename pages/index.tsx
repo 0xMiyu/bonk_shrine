@@ -28,14 +28,14 @@ export default function Home() {
           <h1 id='werk' className={styles.title}>
             Welcome to the Shrine of Bonk!
           </h1>
-          
+
           <h2>Toss in 2 Million $BONK to get your fortune!</h2>
-          <WalletBalance/>
           <RequestPay />
-          
+
         </main>
 
         <footer className={styles.footer}>
+          <WalletBalance />
           <p>
             built and designed by
             <a

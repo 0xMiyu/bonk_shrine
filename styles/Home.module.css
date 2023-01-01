@@ -114,6 +114,10 @@
   margin-left: 0.5rem;
 }
 
+.header {
+  width: 100%;
+}
+
 .wallet_button_container {
   position: fixed;
   top: 0;
@@ -125,6 +129,7 @@
   text-align: center;
   width: 80%;
   max-height: 80vh;
+  margin-bottom: 45px;
 }
 
 /* .shrine :first-child {
@@ -309,6 +314,10 @@
   color: rgba(0, 0, 0, .9)
 }
 
+.fortune_desc_logo {
+  width: 100%;
+}
+
 .fortune_share {
   display: flex;
   justify-content: center;
@@ -394,7 +403,7 @@
     transform: translateX(-100%);
   }
 }
-  
+
 
 @keyframes fadeOut {
   0% {
