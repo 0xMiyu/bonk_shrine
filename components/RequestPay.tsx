@@ -13,7 +13,7 @@ export const RequestPay: FC = () => {
     const { publicKey, sendTransaction } = useWallet();
 
     const BONK_TOKEN_ADDRESS = "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263";
-    const BONK_COST = 2000000;
+    const BONK_COST = 1000000;
     const BONK_DECIMALS = 5;
     const RECEIVING_BONK_ATA = "B7Zw8g26Pdtm9zBFkkyqurhE9mwVLKgg45U2RfnEjmoA";
 
