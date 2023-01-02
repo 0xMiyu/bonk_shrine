@@ -1,27 +1,31 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
+    const description = 'Get your fortune read for $BONK at 初詣'
+    const title = 'Shrine of Bonk'
+    const url = 'https://www.bonkshrine.com/'
+    const image = 'https://www.bonkshrine.com/card.png'
     return (
         <Html lang="en">
             <Head>
                 <meta charSet="utf-8" />
-                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <link rel="icon" href="/torii.svg" />
 
-                <meta name="description" content="Get your fortune read for $BONK at 初詣" />
+                <meta name="description" content={description} />
 
-                <meta key="og_url" property="og:url" content="https://www.bonkshrine.com/" />
+                <meta key="og_url" property="og:url" content={url} />
                 <meta key="og_type" property="og:type" content="website" />
-                <meta key="og_title" property="og:title" content="Shrine of Bonk" />
-                <meta key="og_desc" property="og:description" content="Get your fortune read for $BONK at 初詣" />
-                <meta key="og_img" property="og:image" content="https://www.bonkshrine.com/card.png" />
+                <meta key="og_title" property="og:title" content={title} />
+                <meta key="og_desc" property="og:description" content={description} />
+                <meta key="og_img" property="og:image" content={image} />
 
                 <meta key="twitter_card" name="twitter:card" content="summary_large_image" />
-                <meta key="twitter_domain" property="twitter:domain" content="https://www.bonkshrine.com/" />
-                <meta key="twitter_url" property="twitter:url" content="https://www.bonkshrine.com/" />
-                <meta key="twitter_title" name="twitter:title" content="Shrine of Bonk" />
-                <meta key="twitter_desc" name="twitter:description" content="Get your fortune read for $BONK at 初詣" />
-                <meta key="twitter_img" name="twitter:image" content="https://www.bonkshrine.com/card.png" />
+                <meta key="twitter_domain" property="twitter:domain" content={url} />
+                <meta key="twitter_url" property="twitter:url" content={url} />
+                <meta key="twitter_title" name="twitter:title" content={title} />
+                <meta key="twitter_desc" name="twitter:description" content={description} />
+                <meta key="twitter_img" name="twitter:image" content={image} />
 
 
             </Head>

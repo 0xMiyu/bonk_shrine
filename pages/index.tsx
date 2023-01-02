@@ -29,7 +29,7 @@ export default function Home() {
             Welcome to the Shrine of Bonk!
           </h1>
 
-          <h2>Toss in 2 Million $BONK to get your fortune!</h2>
+          <h2>Toss in 1 Million $BONK to get your fortune!</h2>
           <RequestPay />
 
         </main>
