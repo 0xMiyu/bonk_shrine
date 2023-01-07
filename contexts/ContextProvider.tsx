@@ -15,6 +15,7 @@ import { AutoConnectProvider, useAutoConnect } from './AutoConnectProvider';
 // import { notify } from "../utils/notifications";
 import { NetworkConfigurationProvider, useNetworkConfiguration } from './NetworkConfigurationProvider';
 import dynamic from "next/dynamic";
+import { toast } from 'react-toastify';
 
 
 const ReactUIWalletModalProviderDynamic = dynamic(
@@ -48,7 +49,16 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
 
     const onError = useCallback(
         (error: WalletError) => {
-            alert("Wallet Error!")
+            toast.error('Wallet not Connected!', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "dark",
+                });
             console.error(error);
         },
         []
