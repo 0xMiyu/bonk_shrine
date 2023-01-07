@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.css'
 import { createRoot } from 'react-dom/client'
 import { FortuneElement } from "./fortune";
 import { Torii } from "./torii";
+import { toast } from "react-toastify";
 
 
 export const RequestPay: FC = () => {
@@ -13,14 +14,24 @@ export const RequestPay: FC = () => {
     const { publicKey, sendTransaction } = useWallet();
 
     const BONK_TOKEN_ADDRESS = "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263";
-    const BONK_COST = 1000000;
+    const BONK_COST = 500000;
     const BONK_DECIMALS = 5;
     const RECEIVING_BONK_ATA = "B7Zw8g26Pdtm9zBFkkyqurhE9mwVLKgg45U2RfnEjmoA";
 
     const onClick = useCallback(async () => {
         if (!publicKey) {
             console.log("error", "Wallet not connected!");
-            alert("Wallet not Connected!");
+            // alert("Wallet not Connected!");
+            toast.error('Wallet not Connected!', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "dark",
+                });
             return;
         }
 
@@ -43,6 +54,11 @@ export const RequestPay: FC = () => {
             transaction.add(ix);
 
             const tx = await sendTransaction(transaction, connection);
+            const id = toast.loading("Please wait...", {
+                position: "top-center",
+                theme: "dark",
+            })
+            
             await connection.confirmTransaction({
                 blockhash: (
                     await connection.getLatestBlockhash("max")
@@ -52,7 +68,19 @@ export const RequestPay: FC = () => {
                 ).lastValidBlockHeight,
                 signature: tx,
             });
-            alert("Transaction Confirmed!");
+            toast.update(id, { render: "Transaction Confirmed! 🚀", type: "success", isLoading: false });
+                
+            // alert("Transaction Confirmed!");
+            // toast.success('Transaction Confirmed! 🚀', {
+            //     position: "top-center",
+            //     autoClose: 3000,
+            //     hideProgressBar: false,
+            //     closeOnClick: true,
+            //     pauseOnHover: false,
+            //     draggable: false,
+            //     progress: undefined,
+            //     theme: "dark",
+            //     });
             let root_element = document.getElementById('coin_div');
             let root = createRoot(root_element!)
             const coin_element = createElement('img', { className: styles.coin, src: "BonkLogo.webp" });
@@ -68,7 +96,16 @@ export const RequestPay: FC = () => {
             // console.log("fuck")
 
         } catch (error: any) {
-            alert(error);
+            toast.error(error, {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                progress: undefined,
+                theme: "dark",
+            });
             console.log(error);
         }
     }, [publicKey, connection]);

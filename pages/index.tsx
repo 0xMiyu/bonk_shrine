@@ -5,6 +5,8 @@ import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { ContextProvider } from '../contexts/ContextProvider';
 import { RequestPay } from '../components/RequestPay';
 import { WalletBalance } from '../components/walletBalance';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 require('@solana/wallet-adapter-react-ui/styles.css');
 
 
@@ -24,12 +26,23 @@ export default function Home() {
           <div className={styles.wallet_button_container}>
             <WalletMultiButton className={styles.wallet_button + " btn btn-ghost mr-4"} />
           </div>
-
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+            />
           <h1 id='werk' className={styles.title}>
             Welcome to the Shrine of Bonk!
           </h1>
 
-          <h2>Toss in 1 Million $BONK to get your fortune!</h2>
+          <h2>Toss in 500,000 $BONK to get your fortune!</h2>
           <RequestPay />
 
         </main>
