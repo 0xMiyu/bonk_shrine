@@ -4,4 +4,6 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
+const env = {RPC_ENDPOINT: process.env.RPC_ENDPOINT}
+
+module.exports = {nextConfig, env}
