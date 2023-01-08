@@ -30,7 +30,8 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     // const network = networkConfiguration as WalletAdapterNetwork;
     const network = 'mainnet-beta';
     // const endpoint = useMemo(() => clusterApiUrl(network), [network]);
-    const endpoint = 'https://rpc.helius.xyz/?api-key=60219cb7-35dc-425a-928b-c7be0fc8ebf4';
+    // const endpoint = 'https://rpc.helius.xyz/?api-key=60219cb7-35dc-425a-928b-c7be0fc8ebf4';
+    const endpoint = process.env.RPC_ENDPOINT
     
     console.log(network);
 
@@ -66,7 +67,7 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
 
     return (
         // TODO: updates needed for updating and referencing endpoint: wallet adapter rework
-        <ConnectionProvider endpoint={endpoint}>
+        <ConnectionProvider endpoint={endpoint!}>
             <WalletProvider wallets={wallets} onError={onError} autoConnect={autoConnect}>
                 <ReactUIWalletModalProviderDynamic>
                     {children}
