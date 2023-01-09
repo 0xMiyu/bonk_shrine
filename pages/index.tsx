@@ -4,8 +4,8 @@ import styles from '../styles/Home.module.css'
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { ContextProvider } from '../contexts/ContextProvider';
 import { RequestPay } from '../components/RequestPay';
-import { WalletBalance } from '../components/walletBalance';
-import { ToastContainer } from 'react-toastify';
+// import { WalletBalance } from '../components/walletBalance';
+// import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 require('@solana/wallet-adapter-react-ui/styles.css');
 
