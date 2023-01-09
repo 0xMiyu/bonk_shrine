@@ -12,7 +12,6 @@ require('@solana/wallet-adapter-react-ui/styles.css');
 
 export default function Home() {
   return (
-    <ContextProvider>
       <div className={styles.container}>
         <Head>
           <title>Shrine of Bonk</title>
@@ -26,18 +25,6 @@ export default function Home() {
           <div className={styles.wallet_button_container}>
             <WalletMultiButton className={styles.wallet_button + " btn btn-ghost mr-4"} />
           </div>
-          <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="dark"
-            />
           <h1 id='werk' className={styles.title}>
             Welcome to the Shrine of Bonk!
           </h1>
@@ -47,28 +34,6 @@ export default function Home() {
 
         </main>
 
-        <footer className={styles.footer}>
-          <WalletBalance />
-          <p>
-            built and designed by
-            <a
-              href="https://twitter.com/0xMiyu"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @0xMiyu
-            </a>
-            and
-            <a
-              href="https://github.com/thedylone"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @thedylone
-            </a>
-          </p>
-        </footer>
       </div>
-    </ContextProvider>
   )
 }
