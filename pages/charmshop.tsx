@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 // import { WalletBalance } from '../components/walletBalance';
 import 'react-toastify/dist/ReactToastify.css';
+import { Charm } from '../components/charm';
 require('@solana/wallet-adapter-react-ui/styles.css');
 
 
@@ -17,9 +18,11 @@ export default function Charms() {
 
         </Head>
         <main className={styles.main}>
-          <h1 id='werk' className={styles.title}>
+          <h1 className={styles.title}>
             Charm Shop (in development)
           </h1>
+
+          <Charm charmType='luck'/>
           
         </main>
 
